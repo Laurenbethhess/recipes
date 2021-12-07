@@ -9,7 +9,6 @@ import OnionSoup from "./OnionSoup";
 import Cookies from "./Cookies";
 
 function App() {
-
   return (
     <div className="App">
       <Header />

@@ -2,41 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .card {
   border-style: dashed;
   border-color: black;
@@ -45,4 +10,21 @@
 .image {
   height: 15rem;
   width: auto;
+}
+
+.background {
+  background-size: 25%;
+  background-image: url("https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29va2Jvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60")
+}
+
+.cookbook {
+  color: white
+}
+
+.recipes {
+  background-color: #ffffed;
+}
+
+.title {
+  background-color: #98fb98;
 }

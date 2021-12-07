@@ -16,26 +16,25 @@ function Recipes() {
 
     return (
       <>
-        <main>
-          <h2>Recipes</h2>
-        </main>
-        <nav>
-          <Link to="/">Home</Link>
-        </nav>
-        <nav>
-          <Link to="/onion-soup">French Onion Soup</Link>
-        </nav>
-        <nav>
-          <Link to="/cookies">Chocolate Chip Cookies</Link>
-        </nav>
-        <nav>
-          <Link to="/newRecipeForm">New Recipe Form</Link>
-        </nav>
-        <p>{renderRecipes}</p>
-        <nav>
-          <Link to="/newRecipeForm">New Recipe Form</Link>
-        </nav>
+      <div className='title'>
+        <h2>Recipes</h2>
+        <Link to="/">Home</Link>
         <br/>
+        <Link to="/onion-soup">French Onion Soup</Link>
+        <br/>
+        <Link to="/cookies">Chocolate Chip Cookies</Link>
+        <br/>
+        <Link to="/newRecipeForm">New Recipe Form</Link>
+        <br/>
+        <br/>
+      </div>
+
+      <div className='recipes'>
+        <p>{renderRecipes}</p>
+        <Link to="/newRecipeForm">New Recipe Form</Link>
+        <br/>
+        <br/>
+      </div>
       </>
     );
   }

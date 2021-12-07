@@ -26,20 +26,27 @@ function OnionSoup() {
 
   return (
     <div>
-        <nav>
+        <div className='title'>
+            <br/>
             <Link to="/">Home</Link>
-        </nav>
-        <nav>
+            <br/>
             <Link to="/recipes">Recipes</Link>
-        </nav>
-        <h1>{name}</h1>
-        <img className='image' src={image}/>
-        <h2>Ingredients</h2>
-        <div>{renderIngredients}</div>
-        <h2>Instructions</h2>
-        <div>{renderInstructions}</div>
-        <h2>Comments</h2>
-        <p>{comments}</p>
+            <br/>
+            <br/>
+        </div>
+        <br/>
+        <div className='recipes'>
+            <div className='card'>
+                <h1>{name}</h1>
+                <img className='image' src={image}/>
+                <h2>Ingredients</h2>
+                <div>{renderIngredients}</div>
+                <h2>Instructions</h2>
+                <div>{renderInstructions}</div>
+                <h2>Comments</h2>
+                <p>{comments}</p>
+            </div>
+        </div>
     </div>
   )
 }
