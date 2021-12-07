@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  border-style: dashed;
+  border-color: black;
+}
+
+.image {
+  height: 15rem;
+  width: auto;
+}
