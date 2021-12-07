@@ -15,13 +15,7 @@ function Home() {
         <br/>
         <br/>
         <h1><Link to="/newRecipeForm">New Recipe Form</Link></h1>
-        <br/>
-        <br/>
-        <br/>
-        <h1><Link to="/contact">Contact Info</Link></h1>
-        <br/>
-        <br/>
-        <br/>
+     
         
       </>
     );

@@ -26,6 +26,9 @@ function Recipes() {
           <Link to="/onion-soup">French Onion Soup</Link>
         </nav>
         <nav>
+          <Link to="/cookies">Chocolate Chip Cookies</Link>
+        </nav>
+        <nav>
           <Link to="/newRecipeForm">New Recipe Form</Link>
         </nav>
         <p>{renderRecipes}</p>
