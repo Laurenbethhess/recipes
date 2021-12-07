@@ -1,7 +1,4 @@
 import * as React from "react";
-import NewCommentForm from "./NewCommentForm";
-import {useState}  from 'react';
-
 
 function RecipeCard({recipe}) {
     const renderIngredients = recipe.ingredients.map((item) => {return <p key={recipe.id}>{item}</p>})
@@ -50,7 +47,6 @@ function RecipeCard({recipe}) {
             </div>
             <h2>Comments</h2>
             <p>{recipe.comments}</p>
-            <NewCommentForm />
         </div>
     )
 }

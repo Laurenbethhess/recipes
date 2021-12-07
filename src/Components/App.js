@@ -6,6 +6,7 @@ import '../App.css'
 import Home from './Home'
 import Contact from './Contact'
 import NewRecipeForm from "./NewRecipeForm";
+import OnionSoup from "./OnionSoup";
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="recipes" element={<Recipes />} />
+        <Route path="onion-soup" element={<OnionSoup />} />
         <Route path="newRecipeForm" element={<NewRecipeForm />} />
         <Route path="contact" element={<Contact />} />
-        
       </Routes>
     </div>
   );
