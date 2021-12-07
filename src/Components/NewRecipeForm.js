@@ -2,7 +2,7 @@ import * as React from "react";
 import {useState}  from 'react';
 import { Link } from "react-router-dom";
 
-function NewRecipeForm({onAddRecipe}) {
+function NewRecipeForm() {
     const [recipes, setRecipes] = useState([])
     const [name, setName] = useState('')
     const [ingredients, setIngredients] = useState([])
@@ -46,7 +46,7 @@ function NewRecipeForm({onAddRecipe}) {
       }
 
     function handleSubmit(e) {
-        e.preventDefault()
+        // e.preventDefault()
         fetch("http://localhost:3000/recipes", {
         method: "POST",
         headers: {
@@ -96,53 +96,60 @@ function NewRecipeForm({onAddRecipe}) {
     
     return (
         <>
-            <nav><Link to="/">Home</Link></nav>
-        <nav>
-          <Link to="/recipes">Recipes</Link>
-        </nav>
-        <h3>New Recipe</h3>
-        <form onSubmit={handleSubmit}>
-            <p><input onChange={(e) => setName(e.target.value)} value={name} type="text" name="name" placeholder="Name" /></p>
-            <h3>Ingredients</h3>
-            <input onChange={(e) => setIngredients(e.target.value)} value={[ingredients]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsOne(e.target.value)} value={[ingredientsOne]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsTwo(e.target.value)} value={[ingredientsTwo]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsThree(e.target.value)} value={[ingredientsThree]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsFour(e.target.value)} value={[ingredientsFour]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsFive(e.target.value)} value={[ingredientsFive]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsSix(e.target.value)} value={[ingredientsSix]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsSeven(e.target.value)} value={[ingredientsSeven]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsEight(e.target.value)} value={[ingredientsEight]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsNine(e.target.value)} value={[ingredientsNine]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsTen(e.target.value)} value={[ingredientsTen]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsEleven(e.target.value)} value={[ingredientsEleven]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsTwelve(e.target.value)} value={[ingredientsTwelve]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsThirteen(e.target.value)} value={[ingredientsThirteen]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsFourteen(e.target.value)} value={[ingredientsFourteen]} type="text" name="ingredients" placeholder="Ingredients" />
-            <input onChange={(e) => setIngredientsFifteen(e.target.value)} value={[ingredientsFifteen]} type="text" name="ingredients" placeholder="Ingredients" />
-            <h3>Instructions</h3>
-            <input onChange={(e) => setInstructions(e.target.value)} value={[instructions]} type="text" name="instructions" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsOne(e.target.value)} value={[instructionsOne]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsTwo(e.target.value)} value={[instructionsTwo]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsThree(e.target.value)} value={[instructionsThree]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsFour(e.target.value)} value={[instructionsFour]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsFive(e.target.value)} value={[instructionsFive]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsSix(e.target.value)} value={[instructionsSix]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsSeven(e.target.value)} value={[instructionsSeven]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsEight(e.target.value)} value={[instructionsEight]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsNine(e.target.value)} value={[instructionsNine]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsTen(e.target.value)} value={[instructionsTen]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsEleven(e.target.value)} value={[instructionsEleven]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsTwelve(e.target.value)} value={[instructionsTwelve]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsThirteen(e.target.value)} value={[instructionsThirteen]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsFourteen(e.target.value)} value={[instructionsFourteen]} type="text" name="ingredients" placeholder="Instructions" />
-            <input onChange={(e) => setInstructionsFifteen(e.target.value)} value={[instructionsFifteen]} type="text" name="ingredients" placeholder="Instructions" />
-            <p><input onChange={(e) => setImage(e.target.value)} value={image} type="text" name="image" placeholder="Image" /></p>
-            <p><input onChange={(e) => setComments(e.target.value)} value={comments} type="text" name="comment" placeholder="Add Comment" /></p>
-            <p><button type="submit">Submit</button></p>
-        </form>
-
-
+        <div className='title'>
+            <br/>
+            <Link to="/">Home</Link>
+            <br/>
+            <Link to="/recipes">Recipes</Link>
+            <br/>
+            <br/>
+        </div>
+        <br/>
+        <div className='recipes'>
+            <div className='card'>
+                <h3>New Recipe</h3>
+                <form onSubmit={handleSubmit}>
+                    <p><input onChange={(e) => setName(e.target.value)} value={name} type="text" name="name" placeholder="Name" /></p>
+                    <h3>Ingredients</h3>
+                    <input onChange={(e) => setIngredients(e.target.value)} value={[ingredients]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsOne(e.target.value)} value={[ingredientsOne]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsTwo(e.target.value)} value={[ingredientsTwo]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsThree(e.target.value)} value={[ingredientsThree]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsFour(e.target.value)} value={[ingredientsFour]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsFive(e.target.value)} value={[ingredientsFive]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsSix(e.target.value)} value={[ingredientsSix]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsSeven(e.target.value)} value={[ingredientsSeven]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsEight(e.target.value)} value={[ingredientsEight]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsNine(e.target.value)} value={[ingredientsNine]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsTen(e.target.value)} value={[ingredientsTen]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsEleven(e.target.value)} value={[ingredientsEleven]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsTwelve(e.target.value)} value={[ingredientsTwelve]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsThirteen(e.target.value)} value={[ingredientsThirteen]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsFourteen(e.target.value)} value={[ingredientsFourteen]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <input onChange={(e) => setIngredientsFifteen(e.target.value)} value={[ingredientsFifteen]} type="text" name="ingredients" placeholder="Ingredients" />
+                    <h3>Instructions</h3>
+                    <input onChange={(e) => setInstructions(e.target.value)} value={[instructions]} type="text" name="instructions" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsOne(e.target.value)} value={[instructionsOne]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsTwo(e.target.value)} value={[instructionsTwo]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsThree(e.target.value)} value={[instructionsThree]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsFour(e.target.value)} value={[instructionsFour]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsFive(e.target.value)} value={[instructionsFive]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsSix(e.target.value)} value={[instructionsSix]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsSeven(e.target.value)} value={[instructionsSeven]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsEight(e.target.value)} value={[instructionsEight]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsNine(e.target.value)} value={[instructionsNine]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsTen(e.target.value)} value={[instructionsTen]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsEleven(e.target.value)} value={[instructionsEleven]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsTwelve(e.target.value)} value={[instructionsTwelve]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsThirteen(e.target.value)} value={[instructionsThirteen]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsFourteen(e.target.value)} value={[instructionsFourteen]} type="text" name="ingredients" placeholder="Instructions" />
+                    <input onChange={(e) => setInstructionsFifteen(e.target.value)} value={[instructionsFifteen]} type="text" name="ingredients" placeholder="Instructions" />
+                    <p><input onChange={(e) => setImage(e.target.value)} value={image} type="text" name="image" placeholder="Image" /></p>
+                    <p><input onChange={(e) => setComments(e.target.value)} value={comments} type="text" name="comment" placeholder="Add Comment" /></p>
+                    <p><button type="submit">Submit</button></p>
+                </form>
+            </div>
+        </div>
         </>     
     )
 }
