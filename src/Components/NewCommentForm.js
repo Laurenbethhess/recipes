@@ -8,5 +8,4 @@ function NewCommentForm() {
     )
 }
   
-
 export default NewCommentForm
