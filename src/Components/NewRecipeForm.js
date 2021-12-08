@@ -97,7 +97,7 @@ function NewRecipeForm() {
     return (
         <>
         <div className='title'>
-            <br/>
+            <h2>Create a New Recipe</h2>
             <Link to="/">Home</Link>
             <br/>
             <br/>

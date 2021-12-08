@@ -6,10 +6,8 @@ function Home() {
     return (
       <>
       <div className='title'>
-      <br/>
-        <h2><Link to="/recipes">Recipes</Link></h2>
-        <h2><Link to="/newRecipeForm">New Recipe Form</Link></h2>
-        <br/>
+        <h3><Link to="/recipes">Recipes</Link></h3>
+        <h3><Link to="/newRecipeForm">New Recipe Form</Link></h3>
       </div>
       <br/>
       <div className='background'>
