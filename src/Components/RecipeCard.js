@@ -6,7 +6,7 @@ function RecipeCard({recipe}) {
     return (
         <div className = 'card'>
             <h1>{recipe.name}</h1>
-            <img src={recipe.image} className='image'/>
+            <img src={recipe.image} className='image' alt='food'/>
             <h2>Ingredients</h2>
             <div>
                 {renderIngredients}
