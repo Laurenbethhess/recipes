@@ -100,6 +100,7 @@ function NewRecipeForm() {
             <br/>
             <Link to="/">Home</Link>
             <br/>
+            <br/>
             <Link to="/recipes">Recipes</Link>
             <br/>
             <br/>
