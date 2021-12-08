@@ -14,10 +14,9 @@ function Home() {
       <br/>
       <div className='background'>
         <div className='card'>
-            <h2 className='cookbook'>Welcome to my family's online cookbook!</h2>
+            <h3>Welcome to my family's online cookbook!</h3>
             <img className='main' src='https://images.unsplash.com/photo-1606787504667-961f789e78e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFtaWx5JTIwY29va2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
-            <br/>
-            <br/>
+            <h3>Created by Lauren Hess</h3>
           </div>
       </div>
         
