@@ -9,7 +9,7 @@ function Recipes() {
   const [search, setSearch] = useState("");
   
   useEffect(() => {
-    fetch('http://localhost:3000/recipes')
+    fetch('https://radiant-thicket-26929.herokuapp.com/recipes')
     .then(resp => resp.json())
     .then(data => setRecipes(data))
   }, [])

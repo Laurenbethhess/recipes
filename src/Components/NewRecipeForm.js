@@ -47,7 +47,7 @@ function NewRecipeForm() {
 
     function handleSubmit(e) {
         // e.preventDefault()
-        fetch("http://localhost:3000/recipes", {
+        fetch("https://radiant-thicket-26929.herokuapp.com/recipes", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
