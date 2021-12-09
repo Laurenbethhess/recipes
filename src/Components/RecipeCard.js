@@ -1,8 +1,16 @@
 import * as React from "react";
 
-function RecipeCard({recipe}) {
+function RecipeCard({recipe, onRemoveRecipe}) {
     const renderIngredients = recipe.ingredients.map((item) => {return <p key={recipe.id}>{item}</p>})
     const renderInstructions = recipe.instructions.map((item) => {return <p key={recipe.id}>{item}</p>})
+
+    function handleDeleteClick() {
+        fetch(`https://radiant-thicket-26929.herokuapp.com/recipes/${recipe.id}`, {
+          method: "DELETE",
+        });
+        onRemoveRecipe(recipe.id);
+      }
+
     return (
         <div className = 'card'>
             <h1>{recipe.name}</h1>
@@ -47,6 +55,7 @@ function RecipeCard({recipe}) {
             </div>
             <h2>Comments</h2>
             <p>{recipe.comments}</p>
+            <button onClick={handleDeleteClick} className="emoji-button delete">🗑</button>
         </div>
     )
 }

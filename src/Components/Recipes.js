@@ -16,9 +16,14 @@ function Recipes() {
 
   const displayedRecipes = recipes.filter((recipe) =>
   recipe.name.toLowerCase().includes(search.toLowerCase())
-);
+  )
 
-  const renderRecipes = displayedRecipes.map(recipe => <RecipeCard recipe={recipe} key={recipe.id} />)
+  function handleRemoveRecipe(id) {
+    const newRecipesList = recipes.filter((recipe) => recipe.id !== id);
+    setRecipes(newRecipesList);
+  }
+
+  const renderRecipes = displayedRecipes.map(recipe => <RecipeCard recipe={recipe} key={recipe.id} onRemoveRecipe={handleRemoveRecipe} />)
 
     return (
       <>
