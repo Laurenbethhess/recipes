@@ -13,7 +13,7 @@ function Home() {
       <div className='background'>
         <div className='card'>
             <h3>Welcome to my family's online cookbook!</h3>
-            <img alt='family' className='main' src='https://images.unsplash.com/photo-1606787504667-961f789e78e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFtaWx5JTIwY29va2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
+            <img alt='books' className='main' src='https://images.unsplash.com/photo-1590587754541-a3a4f2e0d06f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'/>
             <h3>Created by Lauren Hess</h3>
           </div>
       </div>
