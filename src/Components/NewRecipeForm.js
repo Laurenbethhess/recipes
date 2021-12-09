@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function NewRecipeForm() {
     const [recipes, setRecipes] = useState([])
     const [name, setName] = useState('')
+    const [link, setLink] = useState('')
     const [ingredients, setIngredients] = useState([])
     const [ingredientsOne, setIngredientsOne] = useState([])
     const [ingredientsTwo, setIngredientsTwo] = useState([])
@@ -54,6 +55,7 @@ function NewRecipeForm() {
         },
         body: JSON.stringify({
             name: name,
+            link: link,
             ingredients: [ingredients],
             ingredientsOne: [ingredientsOne],
             ingredientsTwo: [ingredientsTwo],
@@ -111,6 +113,8 @@ function NewRecipeForm() {
                 <h3>New Recipe</h3>
                 <form onSubmit={handleSubmit}>
                     <p><input onChange={(e) => setName(e.target.value)} value={name} type="text" name="name" placeholder="Name" /></p>
+                    <h3>Add a Link to Someone Else's Recipe</h3>
+                    <p><input onChange={(e) => setLink(e.target.value)} value={link} type="text" name="link" placeholder="Link" /></p>
                     <h3>Ingredients</h3>
                     <input onChange={(e) => setIngredients(e.target.value)} value={[ingredients]} type="text" name="ingredients" placeholder="Ingredients" />
                     <input onChange={(e) => setIngredientsOne(e.target.value)} value={[ingredientsOne]} type="text" name="ingredients" placeholder="Ingredients" />
