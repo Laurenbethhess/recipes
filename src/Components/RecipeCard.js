@@ -56,6 +56,8 @@ function RecipeCard({recipe, onRemoveRecipe}) {
             <h2>Comments</h2>
             <p>{recipe.comments}</p>
             <button onClick={handleDeleteClick} className="emoji-button delete">🗑</button>
+            <br/>
+            <br/>
         </div>
     )
 }
