@@ -14,6 +14,8 @@ function RecipeCard({recipe, onRemoveRecipe}) {
     return (
         <div className = 'card'>
             <h1>{recipe.name}</h1>
+            <a href={recipe.link}>{recipe.link}</a>
+            <br/><br/>
             <img src={recipe.image} className='image' alt='food'/>
             <h2>Ingredients</h2>
             <div>
