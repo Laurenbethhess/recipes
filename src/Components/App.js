@@ -5,6 +5,7 @@ import Recipes from "./Recipes"
 import '../App.css'
 import Home from './Home'
 import NewRecipeForm from "./NewRecipeForm";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="recipes" element={<Recipes />} />
         <Route path="newRecipeForm" element={<NewRecipeForm />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
     </div>
   );
